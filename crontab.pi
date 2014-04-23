@@ -26,3 +26,4 @@ PATH=/home/pi/.local/local/libexec:/usr/local/bin:/usr/games:/usr/bin:/bin
 0,15,30,45 * * * * tweet-urandom.sh >/dev/null 2>/dev/null
 0 1,2,3 * * * tweet-nanjika.sh >/dev/null 2>/dev/null
 0 6 * * * /home/pi/.crontab/do-backup.sh
+0 5 * * * /home/pi/.proj/sync.sh
