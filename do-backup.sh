@@ -1,6 +1,8 @@
 #!/bin/sh
 PATH=/usr/bin:/bin:$PATH
 
+cd $HOME/.crontab
+
 if ! which crontab >/dev/null; then
 	echo crontab: command not found >&2
 	exit 1
