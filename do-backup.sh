@@ -10,4 +10,4 @@ fi
 
 crontab -l >crontab.$USER
 git add crontab.$USER
-git commit crontab.$USER -m "update for user $USER" >/dev/null || true
+git commit crontab.$USER -m "[auto] update for user $USER" >/dev/null || true
