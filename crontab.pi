@@ -22,6 +22,8 @@
 # m h  dom mon dow   command
 PATH=/home/pi/.local/local/libexec:/usr/local/bin:/usr/games:/usr/bin:/bin
 USER=pi
+10 * * * * record-loadavg.sh >/dev/null 2>/dev/null
+10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 0,15,30,45 * * * * tweet-maxim.py >/dev/null 2>/dev/null
 0,15,30,45 * * * * tweet-fortune.sh >/dev/null 2>/dev/null
 0,15,30,45 * * * * tweet-urandom.sh >/dev/null 2>/dev/null
