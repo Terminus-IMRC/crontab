@@ -20,8 +20,9 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-PATH=/home/pi/.local/local/libexec:/usr/local/bin:/usr/games:/usr/bin:/bin
+PATH=/home/pi/.local/local/bin:/home/pi/.local/local/libexec:/usr/local/bin:/usr/games:/usr/bin:/bin
 USER=pi
+@reboot fand.sh
 10 * * * * record-loadavg.sh >/dev/null 2>/dev/null
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
