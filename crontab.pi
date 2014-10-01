@@ -25,7 +25,6 @@ USER=pi
 @reboot forkit /home/pi/.local/local/bin/fand.sh
 @reboot /home/pi/.local/bin/noip2
 @reboot forkit /home/pi/.proj/coma_ararat/totweetd.sh
-@reboot forkit /home/pi/.local/local/bin/sstrig.sh
 10 * * * * record-loadavg.sh >/dev/null 2>/dev/null
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
