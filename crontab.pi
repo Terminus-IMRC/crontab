@@ -37,6 +37,6 @@ USER=pi
 48 1 * * 0-4 tweet-nanjika.sh 3 >/dev/null 2>/dev/null
 32 2 * * 0-4 tweet-nanjika.sh 4 >/dev/null 2>/dev/null
 0 5 * * * /home/pi/.crontab/do-backup.sh
-30 5 * * * cd /home/pi/.proj/; sync.sh
-0 6 * * * cd /home/pi/.gist/; sync.sh
+30 5 * * * cd /home/pi/.proj/; ./sync.sh
+0 6 * * * cd /home/pi/.gist/; ./sync.sh
 30 6 * * * cd /home/pi/.sketchbook/libraries/USB_Host_Shield_20; git pull >/dev/null
