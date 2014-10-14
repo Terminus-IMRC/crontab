@@ -22,11 +22,12 @@
 # m h  dom mon dow   command
 PATH=/home/pi/.local/local/bin:/home/pi/.local/local/libexec:/usr/local/bin:/usr/games:/usr/bin:/bin
 USER=pi
+SHELL=/bin/bash
 @reboot forkit /home/pi/.local/local/bin/fand.sh
 @reboot /home/pi/.local/bin/noip2
 @reboot forkit /home/pi/.proj/coma_ararat/totweetd.sh
-@reboot /home/pi/.local/local/bin/launch-coma_ararat.sh
-@reboot /home/pi/.local/local/bin/launch-n_IMRC.sh
+@reboot . ~/.profile; /home/pi/.local/local/bin/launch-coma_ararat.sh
+@reboot . ~/.profile; sleep 1; /home/pi/.local/local/bin/launch-n_IMRC.sh
 10 * * * * record-loadavg.sh >/dev/null 2>/dev/null
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
