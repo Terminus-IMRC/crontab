@@ -43,5 +43,5 @@ SHELL=/bin/bash
 0 6 * * * cd /home/pi/.gist/; ./sync.sh
 30 6 * * * cd /home/pi/.sketchbook/libraries/USB_Host_Shield_20; git pull >/dev/null
 50 * * * * weather.py 24 >/home/pi/public_html/weather.txt
-55 4 * * * alert-todays-rain.py >/dev/null 2>/dev/null
-20 7 * * * alert-todays-rain.py >/dev/null 2>/dev/null
+55 4 * * * alert-todays-rain.py
+20 7 * * * alert-todays-rain.py
