@@ -27,4 +27,4 @@ SHELL=/bin/bash
 50 * * * * weather.py 24 >/home/pi/public_html/weather.txt
 20 7 * * * alert-todays-rain.py
 2 0 * * * dm-past-tweet-search-result.sh >/dev/null 2>/dev/null
-0 0 * * * cd todays-ms/; ./do.sh
+0 0 * * * cd todays-ms/; ./do.sh >/dev/null 2>/dev/null
