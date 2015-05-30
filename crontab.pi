@@ -8,6 +8,7 @@ SHELL=/bin/bash
 @reboot forkit /home/pi/.proj/coma_ararat/totweetd.sh
 @reboot . ~/.profile; /home/pi/.local/local/bin/launch-coma_ararat.sh
 @reboot . ~/.profile; sleep 1; /home/pi/.local/local/bin/launch-n_IMRC.sh
+@reboot sleep 30; tweet.sh 'imrc.noip.me: booted'
 10 * * * * record-loadavg.sh >/dev/null 2>/dev/null
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
