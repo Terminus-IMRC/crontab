@@ -8,6 +8,9 @@ if ! which crontab >/dev/null; then
 	exit 1
 fi
 
-crontab -l >crontab.$USER
-git add crontab.$USER
-git commit crontab.$USER -m "[auto] update for user $USER" >/dev/null || true
+HOST=$(hostname)
+FILE="crontab.$HOST.$USER"
+
+crontab -l >"$FILE"
+git add "$FILE"
+git commit "$FILE" -m "[auto] update for user $USER at $HOST" >/dev/null || true
