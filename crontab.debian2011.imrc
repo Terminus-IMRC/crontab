@@ -1,0 +1,17 @@
+# m h  dom mon dow   command
+#8   *  *   *   *     beep -f 2000 -l 1000 -e /dev/tty0
+#18   *  *   *   *     beep -f 2000 -l 1000 -e /dev/tty0
+#*/5 *  *   *   *     beep -f 421  -l 500  -e /dev/tty0
+#0 0 * * 1 sudo apt-get update
+#30 0 * * 1 sudo apt-get update
+#0 0 * * 1 sudo apt-get update
+
+#0 0 * * * /home/imrc/.usr/bin/aptupgrade.sh >/dev/null
+PATH=/home/imrc/.usr/bin:/bin:/usr/bin:$PATH
+#0,5,10,15,20,25,30,35,40,45,50,55 * * * * alivesocks.sh
+#* * * * * alivesocks.sh
+
+@reboot waytohome.sh
+@reboot wayfromhome.sh
+
+0 5 * * * /home/imrc/.crontab/do-backup.sh
