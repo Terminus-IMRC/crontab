@@ -3,7 +3,9 @@
 PATH=/home/pi/.local/local/bin:/home/pi/.local/local/libexec:/usr/local/bin:/usr/games:/usr/bin:/bin
 USER=pi
 SHELL=/bin/bash
-@reboot forkit /home/pi/.local/local/bin/fand.sh
+@reboot forkit /home/pi/.local/local/bin/fand_soc
+@reboot sleep 3; forkit /home/pi/.local/local/bin/fand_pu
+@reboot sleep 6; forkit /home/pi/.local/local/bin/fand_hd
 @reboot /home/pi/.local/bin/noip2
 @reboot forkit /home/pi/.proj/coma_ararat/totweetd.sh
 @reboot . ~/.profile; /home/pi/.local/local/bin/launch-coma_ararat.sh
