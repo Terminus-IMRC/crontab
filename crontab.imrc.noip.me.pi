@@ -11,9 +11,7 @@ SHELL=/bin/bash
 @reboot . ~/.profile; /home/pi/.local/local/bin/launch-coma_ararat.sh
 @reboot . ~/.profile; sleep 1; /home/pi/.local/local/bin/launch-n_IMRC.sh
 @reboot sleep 30; tweet.sh 'imrc.noip.me: booted'
-10 * * * * record-loadavg.sh >/dev/null 2>/dev/null
-0,10,20,30,40,50 * * * * record-temp.sh >/dev/null 2>/dev/null
-3,13,23,33,43,53 * * * * /home/pi/.rec_temp/plot/proc.sh
+0,10,20,30,40,50 * * * * do-rec.sh >/dev/null 2>/dev/null
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
 0,15,30,45 * * * * tweet-maxim.py >/dev/null 2>/dev/null
