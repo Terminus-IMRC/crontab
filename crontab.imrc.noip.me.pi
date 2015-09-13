@@ -14,7 +14,7 @@ SHELL=/bin/bash
 0,10,20,30,40,50 * * * * do-rec.sh >/dev/null 2>/dev/null
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
-0,15,30,45 * * * * tweet-maxim.py >/dev/null 2>/dev/null
+1,16,31,46 * * * * tweet-maxim.py >/dev/null 2>/dev/null
 3,18,33,48 * * * * tweet-fortune.sh >/dev/null 2>/dev/null
 2,17,32,47 * * * * tweet-urandom.sh >/dev/null 2>/dev/null
 #0 0,1,6,7,8,12,13,17,18,19,20,21,22,23 * * * cd /home/pi/.proj/coma_ararat/; ./tweet-jokes.pl >/dev/null 2>/dev/null
