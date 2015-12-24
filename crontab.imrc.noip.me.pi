@@ -4,12 +4,12 @@ PATH=/home/pi/.local/local/bin:/home/pi/.local/local/libexec:/usr/local/bin:/usr
 USER=pi
 SHELL=/bin/bash
 @reboot forkit /home/pi/.local/local/bin/fand_soc
-@reboot sleep 3; forkit /home/pi/.local/local/bin/fand_pu
+#@reboot sleep 3; forkit /home/pi/.local/local/bin/fand_pu
 @reboot sleep 6; forkit /home/pi/.local/local/bin/fand_hd
 @reboot /home/pi/.local/bin/noip2
 @reboot forkit /home/pi/.proj/coma_ararat/totweetd.sh
 #@reboot . ~/.profile; /home/pi/.local/local/bin/launch-coma_ararat.sh
-@reboot . ~/.profile; sleep 1; /home/pi/.local/local/bin/launch-n_IMRC.sh
+#@reboot . ~/.profile; sleep 1; /home/pi/.local/local/bin/launch-n_IMRC.sh
 #@reboot sleep 60; tweet.sh 'imrc.noip.me: booted'
 @reboot sleep 60; totweet -m 'd n_IMRC imrc.noip.me: booted' >/dev/null
 @reboot sleep 60; totweet -m 'd adjtimex imrc.noip.me: booted' >/dev/null
