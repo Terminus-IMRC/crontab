@@ -7,7 +7,7 @@ SHELL=/bin/bash
 #@reboot sleep 3; forkit /home/pi/.local/local/bin/fand_pu
 @reboot sleep 6; forkit /home/pi/.local/local/bin/fand_hd
 @reboot /home/pi/.local/bin/noip2
-@reboot forkit /home/pi/.proj/coma_ararat/totweetd.sh
+@reboot forkit /home/pi/.proj/coma_ararat/totweetd/totweetd
 #@reboot . ~/.profile; /home/pi/.local/local/bin/launch-coma_ararat.sh
 #@reboot . ~/.profile; sleep 1; /home/pi/.local/local/bin/launch-n_IMRC.sh
 #@reboot sleep 60; tweet.sh 'imrc.noip.me: booted'
