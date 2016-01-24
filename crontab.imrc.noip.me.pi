@@ -14,6 +14,7 @@ SHELL=/bin/bash
 @reboot sleep 60; totweet -m 'd n_IMRC imrc.noip.me: booted' >/dev/null
 @reboot sleep 60; totweet -m 'd adjtimex imrc.noip.me: booted' >/dev/null
 0,10,20,30,40,50 * * * * do-rec.sh >/dev/null 2>/dev/null
+
 10 * * * * tweet-loadavg.sh >/dev/null 2>/dev/null
 20 * * * * tweet-temperature.sh >/dev/null 2>/dev/null
 1,16,31,46 * * * * tweet-maxim.py >/dev/null 2>/dev/null
@@ -26,6 +27,8 @@ SHELL=/bin/bash
 #12 2 * * 0-4 tweet-nanjika.sh 1 >/dev/null 2>/dev/null
 #30 2 * * 3-4 tweet-nanjika.sh 4 >/dev/null 2>/dev/null
 #1 0 * * 3,5 tweet-do-a-heart-mark.sh >/dev/null 2>/dev/null
+11 * * * * /home/pi/rgb_txt/do.sh
+
 0 5 * * * /home/pi/.crontab/do-backup.sh
 30 5 * * * cd /home/pi/.proj/; ./sync.sh
 0 6 * * * cd /home/pi/.gist/; ./sync.sh
